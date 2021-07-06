@@ -12,10 +12,21 @@
 
 <body>
   
-        
-      <div id="paging"></div>
+        CORS TUTORIAL
+      
 </body>
 <script src="./public/js/jquery-3.6.0.min.js"></script>
-<script src="./public/js/pagination.js"></script>
 <script src="./public/js/main.js"></script>
+<script>
+  $.ajax({
+    url: 'http://localhost:3000/user?page=1',
+    type: 'GET'
+  })
+  .then(data => {
+    console.log(data)
+  })
+  .catch(err => {
+    console.log(err)
+  })
+</script>
 </html>
